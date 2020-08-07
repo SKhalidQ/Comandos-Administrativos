@@ -2,16 +2,20 @@
 
 setlocal enabledelayedexpansion
 
-TITLE Administracion de equipos avanzado - Beta
+TITLE Administración de Equipos Avanzado
 
-IF errorlevel 1 GOTO Error_Inesperado
+IF errorlevel 1 ECHO. && GOTO Error_Inesperado
 
-COLOR 4E
+COLOR 4F
 
 :SalidaCMD
-IF errorlevel 1 GOTO Error_Inesperado
+IF errorlevel 1 ECHO. && GOTO Error_Inesperado
 
-ECHO BETA - Comandos Administrativos [Version 3.0.0] && ECHO.(c) 2019 DCTech97. Todos los derechos reservados. & ECHO.
+ECHO Administracion de Equipos Avanzado && ECHO.(c) 2019 DCTech97. Todos los derechos reservados. & ECHO.
+
+SET DEBUGMODE="Falso"
+
+
 
 ::Menu principal
 :Principal
@@ -55,13 +59,9 @@ IF %Comando% == Reiniciar GOTO Reiniciar
 IF %Comando% == reiniciar GOTO Reiniciar
 IF %Comando% == Salir GOTO Salir
 IF %Comando% == salir GOTO Salir
-IF %Comando% == Debug GOTO Debug
-IF %Comando% == debug GOTO Debug
+IF %Comando% == Debug ( SET DEBUGMODE="Verdadero" && ECHO. && ECHO Debug Mode On && GOTO PrePrincipal)
+IF %Comando% == debug ( SET DEBUGMODE="Verdadero" && ECHO. && ECHO Debug Mode On && GOTO PrePrincipal)
 IF %Comando%==[] GOTO Principal
-::-------------------Debug---------------------------------------------------------
-IF %Comando% == Ejecutar GOTO Ejecutar
-IF %Comando% == ejecutar GOTO Ejecutar
-IF %Comando% == Shutdown GOTO Shutdown
 
 ::Si no son estos comandos ir a Error
 IF NOT %Comando% == Activar ECHO. && GOTO Error
@@ -74,7 +74,7 @@ IF NOT %Comando% == Clave ECHO. && GOTO Error
 IF NOT %Comando% == clave ECHO. && GOTO Error
 IF NOT %Comando% == Info ECHO. && GOTO Error
 IF NOT %Comando% == info ECHO. && GOTO Error
-IF NOT %Comando% == Exportar ECHO. && ECHO. && GOTO Error
+IF NOT %Comando% == Exportar ECHO. && GOTO Error
 IF NOT %Comando% == exportar ECHO. && GOTO Error
 IF NOT %Comando% == Ayuda ECHO. && GOTO Error
 IF NOT %Comando% == ayuda ECHO. && GOTO Error
@@ -96,13 +96,9 @@ IF NOT %Comando% == Salir ECHO. && GOTO Error
 IF NOT %Comando% == salir ECHO. && GOTO Error
 IF NOT %Comando% == Debug ECHO. && GOTO Error
 IF NOT %Comando% == debug ECHO. && GOTO Error
-::-------------------Debug---------------------------------------------------------
-IF NOT %Comando% == Ejecutar GOTO Start
-IF NOT %Comando% == ejecutar GOTO Start
-IF NOT %Comando% == Shutdown GOTO Error
 
 
-::Verificacion de Ussuario si esta seguro si quiere activar o desactivar la cuenta
+::Verificacion de Usuario si esta seguro si quiere activar o desactivar la cuenta
 :Verificacion
 set /p Verificacion=Estas Seguro/a? [S/N]^>
 
@@ -113,18 +109,26 @@ IF %Comando% == Activar ( IF %Verificacion% == S ECHO. && GOTO Activar)
 IF %Comando% == Activar ( IF %Verificacion% == s ECHO. && GOTO Activar)
 IF %Comando% == activar ( IF %Verificacion% == S ECHO. && GOTO Activar)
 IF %Comando% == activar ( IF %Verificacion% == s ECHO. && GOTO Activar)
-IF %Comando% == Activar ( IF %Verificacion% == N GOTO PrePrincipal)
-IF %Comando% == Activar ( IF %Verificacion% == n GOTO PrePrincipal)
-IF %Comando% == activar ( IF %Verificacion% == N GOTO PrePrincipal)
-IF %Comando% == activar ( IF %Verificacion% == n GOTO PrePrincipal)
+IF %Comando% == Activar ( IF %Verificacion% == N ECHO. && GOTO PrePrincipal)
+IF %Comando% == Activar ( IF %Verificacion% == n ECHO. && GOTO PrePrincipal)
+IF %Comando% == activar ( IF %Verificacion% == N ECHO. && GOTO PrePrincipal)
+IF %Comando% == activar ( IF %Verificacion% == n ECHO. && GOTO PrePrincipal)
+IF %Comando% == Activar ( IF %Verificacion% == Ayuda ECHO. && GOTO AyudaVerificacion)
+IF %Comando% == Activar ( IF %Verificacion% == ayuda ECHO. && GOTO AyudaVerificacion)
+IF %Comando% == activar ( IF %Verificacion% == Ayuda ECHO. && GOTO AyudaVerificacion)
+IF %Comando% == activar ( IF %Verificacion% == ayuda ECHO. && GOTO AyudaVerificacion)
 IF %Comando% == Desactivar ( IF %Verificacion% == S ECHO. && GOTO Desactivar)
 IF %Comando% == Desactivar ( IF %Verificacion% == s ECHO. && GOTO Desactivar)
 IF %Comando% == desactivar ( IF %Verificacion% == S ECHO. && GOTO Desactivar)
 IF %Comando% == desactivar ( IF %Verificacion% == s ECHO. && GOTO Desactivar)
-IF %Comando% == Desactivar ( IF %Verificacion% == N GOTO PrePrincipal)
-IF %Comando% == Desactivar ( IF %Verificacion% == n GOTO PrePrincipal)
-IF %Comando% == desactivar ( IF %Verificacion% == N GOTO PrePrincipal)
-IF %Comando% == desactivar ( IF %Verificacion% == n GOTO PrePrincipal)
+IF %Comando% == Desactivar ( IF %Verificacion% == N ECHO. && GOTO PrePrincipal)
+IF %Comando% == Desactivar ( IF %Verificacion% == n ECHO. && GOTO PrePrincipal)
+IF %Comando% == desactivar ( IF %Verificacion% == N ECHO. && GOTO PrePrincipal)
+IF %Comando% == desactivar ( IF %Verificacion% == n ECHO. && GOTO PrePrincipal)
+IF %Comando% == Desactivar ( IF %Verificacion% == Ayuda ECHO. && GOTO AyudaVerificacion)
+IF %Comando% == Desactivar ( IF %Verificacion% == ayuda ECHO. && GOTO AyudaVerificacion)
+IF %Comando% == desactivar ( IF %Verificacion% == Ayuda ECHO. && GOTO AyudaVerificacion)
+IF %Comando% == desactivar ( IF %Verificacion% == ayuda ECHO. && GOTO AyudaVerificacion)
 
 IF %Comando% == Activar ( IF NOT %Verificacion% == S ECHO. && GOTO ErrorVerificacion)
 IF %Comando% == Activar ( IF NOT %Verificacion% == s ECHO. && GOTO ErrorVerificacion)
@@ -134,6 +138,10 @@ IF %Comando% == Activar ( IF NOT %Verificacion% == N ECHO. && GOTO ErrorVerifica
 IF %Comando% == Activar ( IF NOT %Verificacion% == n ECHO. && GOTO ErrorVerificacion)
 IF %Comando% == activar ( IF NOT %Verificacion% == N ECHO. && GOTO ErrorVerificacion)
 IF %Comando% == activar ( IF NOT %Verificacion% == n ECHO. && GOTO ErrorVerificacion)
+IF %Comando% == Activar ( IF NOT %Verificacion% == Ayuda ECHO. && GOTO ErrorVerificacion)
+IF %Comando% == Activar ( IF NOT %Verificacion% == ayuda ECHO. && GOTO ErrorVerificacion)
+IF %Comando% == activar ( IF NOT %Verificacion% == Ayuda ECHO. && GOTO ErrorVerificacion)
+IF %Comando% == activar ( IF NOT %Verificacion% == ayuda ECHO. && GOTO ErrorVerificacion)
 IF %Comando% == Desactivar ( IF NOT %Verificacion% == S ECHO. && GOTO ErrorVerificacion)
 IF %Comando% == Desactivar ( IF NOT %Verificacion% == s ECHO. && GOTO ErrorVerificacion)
 IF %Comando% == desactivar ( IF NOT %Verificacion% == S ECHO. && GOTO ErrorVerificacion)
@@ -142,6 +150,10 @@ IF %Comando% == Desactivar ( IF NOT %Verificacion% == N ECHO. && GOTO ErrorVerif
 IF %Comando% == Desactivar ( IF NOT %Verificacion% == n ECHO. && GOTO ErrorVerificacion)
 IF %Comando% == desactivar ( IF NOT %Verificacion% == N ECHO. && GOTO ErrorVerificacion)
 IF %Comando% == desactivar ( IF NOT %Verificacion% == n ECHO. && GOTO ErrorVerificacion)
+IF %Comando% == Desactivar ( IF NOT %Verificacion% == Ayuda ECHO. && GOTO ErrorVerificacion)
+IF %Comando% == Desactivar ( IF NOT %Verificacion% == ayuda ECHO. && GOTO ErrorVerificacion)
+IF %Comando% == desactivar ( IF NOT %Verificacion% == Ayuda ECHO. && GOTO ErrorVerificacion)
+IF %Comando% == desactivar ( IF NOT %Verificacion% == ayuda ECHO. && GOTO ErrorVerificacion)
 
 
 ::Antes de ir a la pantalla principal imprime esto
@@ -159,13 +171,13 @@ GOTO Principal
 :Activar
 ECHO Activando cuenta de Administrador:
 ECHO.
-net user administrator /active:yes
+net user administrador /active:yes
 IF errorlevel 1 GOTO Sin_Permisos
 ECHO ------------------------------------------------------------------------------------------------------------------------
 ECHO.
 ECHO Estableciendo contraseña de Administrador:
 ECHO.
-net user administrator "Adm1n1str@d0r"
+net user administrator "Adm1n15tr@d0r"
 IF errorlevel 1 GOTO Sin_Permisos
 SET Comando=%
 GOTO PrePrincipal
@@ -175,7 +187,7 @@ GOTO PrePrincipal
 :Desactivar
 ECHO Desactivando cuenta de Administrador:
 ECHO.
-net user administrator /active:no
+net user administrador /active:no
 IF errorlevel 1 GOTO Sin_Permisos
 ECHO ------------------------------------------------------------------------------------------------------------------------
 ECHO.
@@ -187,7 +199,7 @@ SET Comando=%
 GOTO PrePrincipal
 
 
-::Muestrar la version de Windows con el filtro "Sistema Operativo"/ Si el comando es Exportar, Exporta lo siguiente
+::Muestrar la version de Windows con el filtro "Sistema Operativo"
 :Version
 IF %Comando% == Exportar ( IF EXIST "C:\ScryptResult\VersionDelSistema.txt" ( SET DocumentoExiste=VersionDelSistema.txt) && GOTO DocumentoExiste)
 IF %Comando% == exportar ( IF EXIST "C:\ScryptResult\VersionDelSistema.txt" ( SET DocumentoExiste=VersionDelSistema.txt) && GOTO DocumentoExiste)
@@ -200,7 +212,7 @@ SET Exportar=%
 GOTO PrePrincipal
 
 
-::Muestrar la clave de producto/ Si el comando es Exportar, Exporta lo siguiente
+::Muestrar la clave de producto
 :ClaveDeProducto
 IF %Comando% == Exportar ( IF EXIST "C:\ScryptResult\ClaveDeProducto.txt" ( SET DocumentoExiste=ClaveDeProducto.txt) && GOTO DocumentoExiste)
 IF %Comando% == exportar ( IF EXIST "C:\ScryptResult\ClaveDeProducto.txt" ( SET DocumentoExiste=ClaveDeProducto.txt) && GOTO DocumentoExiste)
@@ -218,7 +230,7 @@ SET Exportar=%
 GOTO PrePrincipal
 
 
-::Muestra toda la informacion sobre es sistema/ Si el comando es Exportar, Exporta lo siguiente
+::Muestra toda la informacion sobre es sistema
 :InformacionCompleta
 IF %Comando% == Exportar ( IF EXIST "C:\ScryptResult\InformacionCompleta.txt" ( SET DocumentoExiste=InformacionCompleta.txt) && GOTO DocumentoExiste)
 IF %Comando% == exportar ( IF EXIST "C:\ScryptResult\InformacionCompleta.txt" ( SET DocumentoExiste=InformacionCompleta.txt) && GOTO DocumentoExiste)
@@ -282,15 +294,15 @@ ECHO Version		Muestra la version de Windows
 ECHO Clave		Muesta la clave de producto 
 ECHO Info		Informacion completa del equipo
 ECHO Exportar	Exporta en un documento la informacion solicitada
-ECHO CMD		Ejecuta el Simbolo del Sistema
+ECHO CMD		Ejecuta el Simbolo del Sistema nativo de Windows
 ECHO "ECHO ON/OFF"	Muestra/Esconde el codigo interno
 ECHO Oscuro		Establecer la consola en el modo oscuro
 ECHO Claro		Establecer la consola en el modo claro
 ECHO Ayuda		Muestra los comandos
 ECHO Reiniciar	Reinicia la consola
 ECHO Salir		Salir de la consola
-ECHO.
-ECHO					               ©DCTech97 2019 v5.2.0
+IF %DEBUGMODE% == "Verdadero" GOTO Debug 
+::ECHO					                     ©DCTech97 2019
 SET Comando=%
 GOTO PrePrincipal
 
@@ -304,6 +316,14 @@ ECHO Salir		Salir de la opcion de Exportacion a un documento
 ECHO.
 SET Exportar=%
 GOTO Exportar
+
+
+:AyudaVerificacion
+ECHO S/N		Verificar la activacion o desactivacion de la Cuenta de Administrador Local
+ECHO Ayuda		Muestra todos los comandos de esta opcion
+ECHO ________________________________________________________________________________________________________________________
+ECHO.
+GOTO Verificacion
 
 
 ::Establece la consola en los colores siguientes (Fondo oscuro, Texto blanco)
@@ -330,7 +350,7 @@ CMD.exe
 ECHO.
 ECHO ________________________________________________________________________________________________________________________
 ECHO.
-COLOR 4E
+COLOR 4F
 SET Comando=%
 GOTO SalidaCMD
 
@@ -352,7 +372,7 @@ GOTO PrePrincipal
 ::Cambia el color de la consola a Rojo y borra toda la informacion dentro de la consola
 :Reiniciar
 @ECHO OFF
-COLOR 4E
+COLOR 4f
 CLS.
 SET Comando=%
 GOTO SalidaCMD
@@ -384,7 +404,7 @@ GOTO Exportar
 ::Si el documento ya existe mustra este error y vuelve a PrePrincipal
 :DocumentoExiste
 ECHO El documento (%DocumentoExiste%) que ha solicitado ya existe.
-ECHO Por favor vaya a "C:\ScryptResult" para ver el documento.
+ECHO Por favor vaya a "%DocumentoExiste%" para ver el documento.
 SET Exportar=%
 GOTO PrePrincipal
 
@@ -415,70 +435,10 @@ TIMEOUT 3
 SET Comando=%
 EXIT
 
-::---------------------------------------------------DEBUG AREA------------------------------------------------------------------
-
-:Ejecutar
-SET /p Programa= Introduzca el nombre ^del programa^>
-
-IF %Programa% == cmd GOTO CMD
-IF %Programa% == CMD GOTO CMD
-IF %Programa% == Salir GOTO PrePrincipal
-If %Programa% == salir GOTO PrePrincipal
-IF %Programa% == ".exe" SET Program %Programa%.exe && ECHO Exito
-
-
-
-::IF NOT %Programa% == *.exe ECHO. && GOTO ErrorEjecucion
-START %Programa%
-IF errorlevel 1 ECHO. && ECHO ERROR && ECHO. && GOTO ErrorEjecucion
-ECHO %Programa% ha sido ejecutado
-GOTO Debug
-
-
-:ErrorEjecucion
-ECHO %Programa% es incorrecto o no existe.
-ECHO.
-GOTO Ejecutar
-
-
-
-:Shutdown
-::shutdown /h
-ECHO Deshabilitado
-GOTO Debug
-
-:ClaveDeProductoBeta
-::wmic os get "SerialNumber" | find /v "SerialNumber"
-
-set /p IDdeProducto=Introduzca el ID del producto^>
-
-::SET nuevo="/v"
-IF errorlevel 1 GOTO Sin_Permisos
-
-IF %IDdeProducto% == "00330-80195-71466-AA679" GOTO InformacionDeClave
-IF NOT %IDdeProducto% == "00330-80195-71466-AA679" GOTO ErrorDeID
-::wmic os get "SerialNumber" GOTO InformacionDeClave
-
-IF %IDdeProducto% == Exit GOTO Principal
-IF %IDdeProducto% == exit GOTO Principal
-GOTO Debug
-
 
 ::DEBUG
 :Debug
-ECHO Exito!
+ECHO.
+ECHO					    Administracion de Equipos Avanzado [Version 5.4.0] && ECHO.				    (c) 2019 DCTech97. Todos los derechos reservados. && ECHO. 						      Version Final.
+SET Comando=%
 GOTO PrePrincipal
-
-
-::--------------------------------------------EXPERIMENTAL AREA------------------------------------------------------------------
-
-
-:ExportarEX
-Beta-ComandosAdministrativos.cmd 1>stdout.txt 2>errors.txt
-c:\Users\skq09\Desktop\Beta-ComandosAdministrativos.cmd >> c:\yourLogFile.txt
-
-IF NOT EXIST "C:\ScriptResult" MD C:\ScryptResult
-Desktop\BetaComandosAdministrativos.cmd >> C:\ScryptResult\MyFIle.txt
-
-SET Comando=ipconfig
-%Comando% > file.txt 2>&1

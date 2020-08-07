@@ -203,8 +203,8 @@ GOTO PrePrincipal
 :Version
 IF %Comando% == Export ( IF EXIST "C:\ScryptResult\SystemVersion.txt" ( SET DocumentoExiste=SystemVersion.txt) && GOTO DocumentoExiste)
 IF %Comando% == export ( IF EXIST "C:\ScryptResult\SystemVersion.txt" ( SET DocumentoExiste=SystemVersion.txt) && GOTO DocumentoExiste)
-IF %Comando% == Export systeminfo | findstr /C:"OS" >> C:\ScryptResult\SystemVersion.txt && ECHO. && ECHO Exportado correctamente en C:\ScryptResult\SystemVersion.txt && GOTO PrePrincipal
-IF %Comando% == export systeminfo | findstr /C:"OS" >> C:\ScryptResult\SystemVersion.txt && ECHO. && ECHO Exportado correctamente en C:\ScryptResult\SystemVersion.txt && GOTO PrePrincipal
+IF %Comando% == Export systeminfo | findstr /C:"OS" >> C:\ScryptResult\SystemVersion.txt && ECHO. && ECHO Exported successfully in C:\ScryptResult\SystemVersion.txt && GOTO PrePrincipal
+IF %Comando% == export systeminfo | findstr /C:"OS" >> C:\ScryptResult\SystemVersion.txt && ECHO. && ECHO Exported successfully in  C:\ScryptResult\SystemVersion.txt && GOTO PrePrincipal
 ECHO.
 systeminfo | findstr /C:"OS"
 SET Comando=%
@@ -214,14 +214,14 @@ GOTO PrePrincipal
 
 ::Mostrar la clave de producto
 :ClaveDeProducto
-IF %Comando% == Exportar ( IF EXIST "C:\ScryptResult\ProductKey.txt" ( SET DocumentoExiste=ProductKey.txt) && GOTO DocumentoExiste)
-IF %Comando% == exportar ( IF EXIST "C:\ScryptResult\ProductKey.txt" ( SET DocumentoExiste=ProductKey.txt) && GOTO DocumentoExiste)
-IF %Comando% == Exportar wmic os get "SerialNumber" | find /v "SerialNumber" >> C:\ScryptResult\ProductKey.txt
-IF %Comando% == exportar wmic os get "SerialNumber" | find /v "SerialNumber" >> C:\ScryptResult\ProductKey.txt
-IF %Comando% == Exportar ECHO ------------------------------------------------------------------------------------------------------------------------ >> C:\ScryptResult\ProductKey.txt
-IF %Comando% == exportar ECHO ------------------------------------------------------------------------------------------------------------------------ >> C:\ScryptResult\ProductKey.txt
-IF %Comando% == Exportar wmic path softwarelicensingservice get OA3xOriginalProductKey >> C:\ScryptResult\ProductKey.txt && ECHO Exportado correctamente en C:\ScryptResult\ProductKey.txt && GOTO PrePrincipal
-IF %Comando% == exportar wmic path softwarelicensingservice get OA3xOriginalProductKey >> C:\ScryptResult\ProductKey.txt && ECHO Exportado correctamente en C:\ScryptResult\ProductKey.txt && GOTO PrePrincipal
+IF %Comando% == Export ( IF EXIST "C:\ScryptResult\ProductKey.txt" ( SET DocumentoExiste=ProductKey.txt) && GOTO DocumentoExiste)
+IF %Comando% == export ( IF EXIST "C:\ScryptResult\ProductKey.txt" ( SET DocumentoExiste=ProductKey.txt) && GOTO DocumentoExiste)
+IF %Comando% == Export wmic os get "SerialNumber" | find /v "SerialNumber" >> C:\ScryptResult\ProductKey.txt
+IF %Comando% == export wmic os get "SerialNumber" | find /v "SerialNumber" >> C:\ScryptResult\ProductKey.txt
+IF %Comando% == Export ECHO ------------------------------------------------------------------------------------------------------------------------ >> C:\ScryptResult\ProductKey.txt
+IF %Comando% == export ECHO ------------------------------------------------------------------------------------------------------------------------ >> C:\ScryptResult\ProductKey.txt
+IF %Comando% == Export wmic path softwarelicensingservice get OA3xOriginalProductKey >> C:\ScryptResult\ProductKey.txt && ECHO Exported successfully in  C:\ScryptResult\ProductKey.txt && GOTO PrePrincipal
+IF %Comando% == export wmic path softwarelicensingservice get OA3xOriginalProductKey >> C:\ScryptResult\ProductKey.txt && ECHO Exported successfully in  C:\ScryptResult\ProductKey.txt && GOTO PrePrincipal
 ECHO ID del producto
 wmic os get "SerialNumber" | find /v "SerialNumber"
 wmic path softwarelicensingservice get OA3xOriginalProductKey
@@ -232,14 +232,14 @@ GOTO PrePrincipal
 
 ::Muestra toda la informacion sobre es sistema
 :InformacionCompleta
-IF %Comando% == Exportar ( IF EXIST "C:\ScryptResult\CompleteInfo.txt" ( SET DocumentoExiste=CompleteInfo.txt) && GOTO DocumentoExiste)
-IF %Comando% == exportar ( IF EXIST "C:\ScryptResult\CompleteInfo.txt" ( SET DocumentoExiste=CompleteInfo.txt) && GOTO DocumentoExiste)
-IF %Comando% == Exportar systeminfo >> C:\ScryptResult\CompleteInfo.txt
-IF %Comando% == exportar systeminfo >> C:\ScryptResult\CompleteInfo.txt
-IF %Comando% == Exportar ECHO ------------------------------------------------------------------------------------------------------------------------ >> C:\ScryptResult\CompleteInfo.txt
-IF %Comando% == exportar ECHO ------------------------------------------------------------------------------------------------------------------------ >> C:\ScryptResult\CompleteInfo.txt
-IF %Comando% == Exportar ipconfig /all >> C:\ScryptResult\CompleteInfo.txt && ECHO Exportado correctamente en C:\ScryptResult\CompleteInfo.txt && GOTO PrePrincipal
-IF %Comando% == exportar ipconfig /all >> C:\ScryptResult\CompleteInfo.txt && ECHO Exportado correctamente en C:\ScryptResult\CompleteInfo.txt && GOTO PrePrincipal
+IF %Comando% == Export ( IF EXIST "C:\ScryptResult\CompleteInfo.txt" ( SET DocumentoExiste=CompleteInfo.txt) && GOTO DocumentoExiste)
+IF %Comando% == export ( IF EXIST "C:\ScryptResult\CompleteInfo.txt" ( SET DocumentoExiste=CompleteInfo.txt) && GOTO DocumentoExiste)
+IF %Comando% == Export systeminfo >> C:\ScryptResult\CompleteInfo.txt
+IF %Comando% == export systeminfo >> C:\ScryptResult\CompleteInfo.txt
+IF %Comando% == Export ECHO ------------------------------------------------------------------------------------------------------------------------ >> C:\ScryptResult\CompleteInfo.txt
+IF %Comando% == export ECHO ------------------------------------------------------------------------------------------------------------------------ >> C:\ScryptResult\CompleteInfo.txt
+IF %Comando% == Export ipconfig /all >> C:\ScryptResult\CompleteInfo.txt && ECHO Exported successfully in  C:\ScryptResult\CompleteInfo.txt && GOTO PrePrincipal
+IF %Comando% == export ipconfig /all >> C:\ScryptResult\CompleteInfo.txt && ECHO Exported successfully in  C:\ScryptResult\CompleteInfo.txt && GOTO PrePrincipal
 systeminfo
 ECHO.
 ECHO ------------------------------------------------------------------------------------------------------------------------
@@ -251,7 +251,7 @@ GOTO PrePrincipal
 
 ::Exporta la informaxion en un documento
 :Exportar
-SET /p Exportar=Waat would you like to export^?^>
+SET /p Exportar=What would you like to export^?^>
 
 SET var=%Exportar%
 
@@ -395,7 +395,7 @@ GOTO Verificacion
 
 ::Mensaje para comando de exporte desconocido
 :ErrorCExportar
-ECHO "%Exportar%" es un comando desconocido.
+ECHO "%Exportar%" is a unknown command.
 ECHO.
 SET Exportar=%
 GOTO Exportar
