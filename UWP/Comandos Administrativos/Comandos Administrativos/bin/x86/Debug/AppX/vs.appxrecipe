@@ -8,9 +8,9 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>e1fd845a-8a3a-4999-b838-a9944853b45b</PackageIdentityName>
+    <PackageIdentityName>D652ED7D-4E9D-4E07-BBD3-427D0E74ABEC</PackageIdentityName>
     <PackageIdentityPublisher>CN=skq09</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,98 +18,207 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>4DEA0631215CB27EACECE33BAD55E2E57486E8BF8678068310C10C77E7189892</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>e1fd845a-8a3a-4999-b838-a9944853b45b_1.0.0.0_x86__0fweqz3xvzye4</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>e1fd845a-8a3a-4999-b838-a9944853b45b_0fweqz3xvzye4!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>e1fd845a-8a3a-4999-b838-a9944853b45b</RegisteredPackageID>
+    <LayoutDir>C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>B7EC73B8E4D4C2D9805157BFD83A7F649A9182C91784BF833DDAB8EA3E698046</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>D652ED7D-4E9D-4E07-BBD3-427D0E74ABEC_1.0.0.0_x86__0fweqz3xvzye4</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>D652ED7D-4E9D-4E07-BBD3-427D0E74ABEC_0fweqz3xvzye4!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>D652ED7D-4E9D-4E07-BBD3-427D0E74ABEC</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=skq09</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-08-29T02:47:09.783</Modified>
+      <Modified>2020-09-01T05:18:39.354</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Comandos Administrativos.exe">
-      <PackagePath>entrypoint\Comandos Administrativos.exe</PackagePath>
-      <Modified>2020-08-29T02:47:09.282</Modified>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Comandos_Administrativos.exe">
+      <PackagePath>entrypoint\Comandos_Administrativos.exe</PackagePath>
+      <Modified>2020-09-01T05:18:38.614</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\.nuget\packages\adaptivecards\1.2.4\lib\netstandard2.0\AdaptiveCards.dll">
+      <PackagePath>AdaptiveCards.dll</PackagePath>
+      <Modified>2019-11-05T02:53:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\2.0.1\lib\uap10.0\Microsoft.Xaml.Interactions.dll">
+      <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
+      <Modified>2019-04-27T00:06:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\2.0.1\lib\uap10.0\Microsoft.Xaml.Interactivity.dll">
+      <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
+      <Modified>2019-04-27T00:06:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2019-11-09T00:56:44.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.10\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2020-02-27T18:16:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos.Core\bin\Debug\netstandard2.0\Comandos Administrativos.Core.dll">
+      <PackagePath>Comandos Administrativos.Core.dll</PackagePath>
+      <Modified>2020-09-01T01:49:02.127</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
-      <Modified>2019-03-18T17:36:56.000</Modified>
+      <Modified>2019-12-06T19:24:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-08-29T02:12:54.500</Modified>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <Modified>2020-09-01T01:48:22.765</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2020-08-16T15:08:06.055</Modified>
+      <Modified>2020-09-01T01:48:21.363</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-08-16T15:08:06.057</Modified>
+      <Modified>2020-09-01T01:48:21.364</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-08-16T15:08:06.058</Modified>
+      <Modified>2020-09-01T01:48:21.365</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-08-16T15:08:06.058</Modified>
+      <Modified>2020-09-01T01:48:21.366</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-08-16T15:08:06.059</Modified>
+      <Modified>2020-09-01T01:48:21.366</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-08-16T15:08:06.059</Modified>
+      <Modified>2020-09-01T01:48:21.373</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-08-16T15:08:06.060</Modified>
+      <Modified>2020-09-01T01:48:21.373</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Comandos Administrativos.xr.xml">
-      <PackagePath>Comandos Administrativos.xr.xml</PackagePath>
-      <Modified>2020-08-29T02:40:55.701</Modified>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2020-09-01T01:48:21.376</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Comandos_Administrativos.xr.xml">
+      <PackagePath>Comandos_Administrativos.xr.xml</PackagePath>
+      <Modified>2020-09-01T05:18:38.480</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-08-29T02:47:09.187</Modified>
+      <Modified>2020-09-01T05:18:38.491</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\MainPage.xbf">
-      <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-08-29T02:47:09.187</Modified>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Styles\Page.xbf">
+      <PackagePath>Styles\Page.xbf</PackagePath>
+      <Modified>2020-09-01T05:18:38.491</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Styles\_Colors.xbf">
+      <PackagePath>Styles\_Colors.xbf</PackagePath>
+      <Modified>2020-09-01T05:18:38.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Styles\_FontSizes.xbf">
+      <PackagePath>Styles\_FontSizes.xbf</PackagePath>
+      <Modified>2020-09-01T05:18:38.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Styles\_Thickness.xbf">
+      <PackagePath>Styles\_Thickness.xbf</PackagePath>
+      <Modified>2020-09-01T05:18:38.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Styles\TextBlock.xbf">
+      <PackagePath>Styles\TextBlock.xbf</PackagePath>
+      <Modified>2020-09-01T05:18:38.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Views\MainPage.xbf">
+      <PackagePath>Views\MainPage.xbf</PackagePath>
+      <Modified>2020-09-01T05:18:38.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Views\SchemeActivationSamplePage.xbf">
+      <PackagePath>Views\SchemeActivationSamplePage.xbf</PackagePath>
+      <Modified>2020-09-01T05:18:38.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Views\SettingsPage.xbf">
+      <PackagePath>Views\SettingsPage.xbf</PackagePath>
+      <Modified>2020-09-01T05:18:38.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Views\ShellPage.xbf">
+      <PackagePath>Views\ShellPage.xbf</PackagePath>
+      <Modified>2020-09-01T05:18:38.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
+      <PackagePath>ucrtbased.dll</PackagePath>
+      <Modified>2019-12-06T19:29:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2019-03-18T16:33:42.000</Modified>
+      <Modified>2019-12-06T17:33:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\skq09\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+      <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
+      <Modified>2020-05-19T08:27:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-08-29T02:15:36.496</Modified>
+      <Modified>2020-09-01T03:03:06.008</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\skq09\Documents\GitHub\Comandos-Administrativos\UWP\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Core\Comandos Administrativos.exe">
-      <PackagePath>Comandos Administrativos.exe</PackagePath>
-      <Modified>2020-08-29T02:47:09.763</Modified>
+    <AppxPackagedFile Include="C:\Users\skq09\source\repos\Comandos Administrativos\Comandos Administrativos\bin\x86\Debug\Core\Comandos_Administrativos.exe">
+      <PackagePath>Comandos_Administrativos.exe</PackagePath>
+      <Modified>2020-09-01T05:18:39.350</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\skq09\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42005.18002.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\skq09\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\skq09\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42005.18002.0</Version>
+      <Architecture>Win32</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\skq09\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\skq09\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42005.18002.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\skq09\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\skq09\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42005.18002.0</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\skq09\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\skq09\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42005.18002.0</Version>
+      <Architecture>arm64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.18002.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\skq09\.nuget\packages\microsoft.ui.xaml\2.4.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.10\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27902.3</Version>
